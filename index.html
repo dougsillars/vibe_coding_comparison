@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Pulse - Founder Check-in</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Pulse</h1>
+            <p class="subtitle">Your daily founder check-in</p>
+        </header>
+
+        <main id="app">
+            <!-- Check-in Form -->
+            <div id="checkInForm" class="card">
+                <div class="question-group">
+                    <label for="energy">How's your energy?</label>
+                    <div class="slider-container">
+                        <span class="slider-label">Low</span>
+                        <input type="range" id="energy" min="1" max="10" value="5" class="slider">
+                        <span class="slider-label">High</span>
+                    </div>
+                    <div class="value-display" id="energyValue">5</div>
+                </div>
+
+                <div class="question-group">
+                    <label for="focus">How focused do you feel?</label>
+                    <div class="slider-container">
+                        <span class="slider-label">Scattered</span>
+                        <input type="range" id="focus" min="1" max="10" value="5" class="slider">
+                        <span class="slider-label">Laser-focused</span>
+                    </div>
+                    <div class="value-display" id="focusValue">5</div>
+                </div>
+
+                <div class="question-group">
+                    <label for="stress">How stressed are you?</label>
+                    <div class="slider-container">
+                        <span class="slider-label">Calm</span>
+                        <input type="range" id="stress" min="1" max="10" value="5" class="slider">
+                        <span class="slider-label">Overwhelmed</span>
+                    </div>
+                    <div class="value-display" id="stressValue">5</div>
+                </div>
+
+                <button id="submitBtn" class="submit-btn">Get My Pulse</button>
+            </div>
+
+            <!-- Results Display -->
+            <div id="results" class="card hidden">
+                <h2>Today's Pulse</h2>
+                
+                <div class="visual-summary">
+                    <div class="metric">
+                        <div class="metric-label">Energy</div>
+                        <div class="bar-container">
+                            <div class="bar energy-bar" id="energyBar"></div>
+                        </div>
+                        <div class="metric-value" id="energyResult"></div>
+                    </div>
+
+                    <div class="metric">
+                        <div class="metric-label">Focus</div>
+                        <div class="bar-container">
+                            <div class="bar focus-bar" id="focusBar"></div>
+                        </div>
+                        <div class="metric-value" id="focusResult"></div>
+                    </div>
+
+                    <div class="metric">
+                        <div class="metric-label">Stress</div>
+                        <div class="bar-container">
+                            <div class="bar stress-bar" id="stressBar"></div>
+                        </div>
+                        <div class="metric-value" id="stressResult"></div>
+                    </div>
+
+                    <div class="overall-score">
+                        <div class="score-label">Overall Vibe</div>
+                        <div class="score-circle" id="overallScore"></div>
+                    </div>
+                </div>
+
+                <div class="insight-box">
+                    <h3>Insight</h3>
+                    <p id="insightText"></p>
+                </div>
+
+                <button id="checkInAgain" class="secondary-btn">Check In Again</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Track your founder journey, one day at a time.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
